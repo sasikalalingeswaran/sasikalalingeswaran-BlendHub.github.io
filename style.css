@@ -1038,7 +1038,7 @@ img {
     }
     .mob-nav ul{
       display: flex;
-      gap: 170px;
+      gap: 90px;
       color: grey;
     }
      .bottom-nav-item i {
@@ -1058,13 +1058,13 @@ img {
       width: fit-content;
     }
     .homehead{
-      font-size: 15px;
+      font-size: 10px;
       position: absolute;
       top: 20px;
       left: 8px;
     }
     .spanhome{
-      font-size: 16px;
+      font-size: 10px;
       position: absolute;
       top: 40px;
       left: 8px;
@@ -1074,14 +1074,15 @@ img {
     }
     .shop{
       position: absolute;
-      top: 80px;
-      width: 20%;
-      height: 25px;
+      top: 70px;
+      width: 15%;
+      height: 20px;
       left: 10px;
       background-color: blue;
+      font-size: 8px;
     }
     footer{
-      padding-bottom: 70px;
+      padding-bottom: 100px;
     }
     .footer-bottom{
       font-size: 12px;
@@ -1089,5 +1090,16 @@ img {
     .payment-icons{
       position: absolute;
       top: 11px;
+    }
+    .cate-display{
+      width: 80%;
+    }
+    .cate-display img{
+      width: 40%;
+    }
+    .payment-icons{
+      position: absolute;
+      top: 50px;
+      left: 30px;
     }
 }
