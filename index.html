@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> BlendHub </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">B</span>
+        <span class="logo-text">Blend<span class="hub">Hub</span></span>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#contact" class="nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <button class="cart-info" id="cartButton" type="button" aria-label="View cart">
+        <span class="cart-icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></span>
+        <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero / Store Heading ===== -->
+    <section id="home" class="hero">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/homepage.png" alt="BlendHub storefront">
+          <div class="text-home">
+            <h4 class="homehead"> Everything You Love. </h4>
+            <span class="spanhome"> All in One Blend.</span> 
+            <p class="homepara">Explore the latest electronics , accessories and <br>fashion - all at <span class="blend">BlendHub.</span></p>
+            <button class="shop">Shop Now</button>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <img src="images/elctronics.png" alt="Electronics collection">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/accessories.png" alt="Accessories collection">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/cloth.jpg" alt="Clothing collection">
+        </div>
+      </div>
+
+      <div class="slide-dots" style="text-align:center; margin-top:14px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </section>
+
+    <div class="boxes">
+      <div class="flex-box">
+        <i class="fa-solid fa-truck-fast"></i> 
+        <h4> Free Shipping <span><br>Free delivery on all <br>orders above $50</span></h4>
+      </div>
+      <div class="flex-box">
+        <i class="fa-solid fa-shield-halved"></i> 
+        <h4> Secure Payment <span><br>100% secure payment <br>guarantee</span></h4>
+      </div>
+      <div class="flex-box">
+        <i class="fa-solid fa-medal"></i> 
+        <h4> Best Quality <span><br>Original products  <br> with best quality</span></h4>
+      </div>
+      <div class="flex-box">
+        <i class="fa-solid fa-headset"></i> 
+        <h4> 24/7 Support <span><br>Online support anytime</span></h4>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="cate-display" style="background-color: rgb(217, 203, 240);">
+        <h4> Electronics <span><br>Smart gadgets for smarter you.</span></h4>
+        <img src="images/cate-elec.png" width="150px" height="120px" style="margin-left: 60px;">
+      </div>
+      <div class="cate-display" style="background-color: rgb(179, 245, 234);">
+        <h4> Accessories <span><br>A perfect add-ons for everyday life.</span></h4>
+        <img src="images/category-bag.png" width="140px" height="120px" style="margin-left: 60px;">
+      </div>
+      <div class="cate-display" style="background-color: rgb(241, 206, 160);">
+        <h4> Clothing <span><br>Style that fits you everyday.</span></h4>
+        <img src="images/category-cloth.png"  width="150px" height="120px" style="margin-left: 60px;">
+      </div>
+    </div>
+
+    <!-- ===== Product Display Section ===== -->
+    <section id="products" class="product-section">
+      <h2 class="section-title">Our Products</h2>
+
+      <div class="category-tabs">
+        <button class="category-btn active" data-category="all" type="button">All</button>
+        <button class="category-btn" data-category="electronics" type="button">Electronics</button>
+        <button class="category-btn" data-category="clothing" type="button">Clothing</button>
+        <button class="category-btn" data-category="accessories" type="button">Accessories</button>
+      </div>
+
+      <div class="products-wrapper">
+        <div class="product-grid" id="productsGrid"></div>
+      </div>
+    </section>
+ 
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact-section">
+      <div class="contact-title-row">
+        <span class="title-line"></span>
+        <h2 class="section-title">Contact Us</h2>
+        <span class="title-line"></span>
+      </div>
+
+      <div class="contact-container">
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p id="form-status" class="form-status hidden">Thanks! Your message has been sent.</p>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <p>48 Meridian Loop<br>Harbor District</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <p>hello@blendhub.co</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <p>+1 (555) 908-4471</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+            <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+ 
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3 class="footer-logo">BlendHub</h3>
+        <p>Electronics, clothing and accessories in one store.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p>48 Meridian Loop, Harbor District</p>
+        <p>hello@blendhub.co</p>
+        <p>+1 (555) 908-4471</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BlendHub. All rights reserved.</p>
+      <div class="payment-icons">
+        <p>We Accept: </p>
+      <i class="fa-brands fa-cc-visa" style="font-size: 32px;" title="Visa"></i>
+      <i class="fa-brands fa-google-pay" style="font-size: 32px;" title="Google Pay"></i>
+      <i class="fa-brands fa-paypal" style="font-size: 32px;" title="PayPal"></i></div>
+    </div>
+  </footer>
+ 
+  <!-- ===== Product Detail Drawer ===== -->
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-panel" id="detailPanel">
+      <button class="detail-close" id="detailClose" type="button" aria-label="Close product details">&times;</button>
+ 
+      <div class="detail-image-box">
+        <img id="detailImage" src="" alt="">
+      </div>
+ 
+      <span class="detail-category" id="detailCategory"></span>
+      <h3 class="detail-name" id="detailName"></h3>
+      <p class="detail-price" id="detailPrice"></p>
+      <p class="detail-desc" id="detailDesc"></p>
+ 
+      <button class="add-to-cart-btn" id="detailAddBtn" type="button">Add to Cart</button>
+    </div>
+  </div>
+
+   <nav class="mob-nav">
+        <ul>
+          <div title="Home"><li><a href="#home" class="bottom-nav-item"><i class="fa-solid fa-house"></i></a></li></div>
+          <div title="Products"><li><a href="#products" class="bottom-nav-item"><i class="fa-solid fa-box-open"></i></a></li></div>
+          <div title="Contact"><li><a href="#contact" class="bottom-nav-item"><i class="fa-solid fa-envelope"></i></a></li></div>
+        </ul>
+      </nav>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
