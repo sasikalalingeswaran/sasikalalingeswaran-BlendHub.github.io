@@ -257,6 +257,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ---- Dark mode toggle (header checkbox switch + mobile icon button) ----
+  var themeToggle = document.getElementById('themeToggle');
+  var mobThemeToggle = document.getElementById('mobThemeToggle');
+
+  function isDarkMode() {
+    return document.documentElement.classList.contains('dark-mode');
+  }
+
+  function updateThemeIcons() {
+    var dark = isDarkMode();
+    if (themeToggle) themeToggle.checked = dark;
+    if (mobThemeToggle) {
+      mobThemeToggle.querySelector('i').className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+  }
+
+  function setDarkMode(dark) {
+    document.documentElement.classList.toggle('dark-mode', dark);
+    localStorage.setItem('blendhub-theme', dark ? 'dark' : 'light');
+    updateThemeIcons();
+  }
+
+  updateThemeIcons(); // match whatever the inline head script already applied
+
+  if (themeToggle) {
+    themeToggle.addEventListener('change', function () {
+      setDarkMode(themeToggle.checked);
+    });
+  }
+
+  if (mobThemeToggle) {
+    mobThemeToggle.addEventListener('click', function () {
+      setDarkMode(!isDarkMode());
+    });
+  }
+
   // ---- Shop Now button on hero (scrolls to products) ----
   var shopBtn = document.querySelector('.shop');
   if (shopBtn) {
@@ -310,3 +346,7 @@ function currentSlide(n) {
   slideIndex = n - 1;
   showSlides();
 }
+
+ if (localStorage.getItem('blendhub-theme') === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
