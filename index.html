@@ -24,10 +24,21 @@
         </ul>
       </nav>
 
-      <button class="cart-info" id="cartButton" type="button" aria-label="View cart">
-        <span class="cart-icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></span>
-        <span id="cart-count">0</span>
-      </button>
+      <div class="header-actions">
+        <label class="theme-switch" for="themeToggle" aria-label="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" class="theme-switch-checkbox">
+          <span class="theme-switch-track">
+            <i class="fa-solid fa-sun theme-switch-icon sun"></i>
+            <i class="fa-solid fa-moon theme-switch-icon moon"></i>
+            <span class="theme-switch-thumb"></span>
+          </span>
+        </label>
+
+        <button class="cart-info" id="cartButton" type="button" aria-label="View cart">
+          <span class="cart-icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span id="cart-count">0</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -215,6 +226,7 @@
           <div title="Home"><li><a href="#home" class="bottom-nav-item"><i class="fa-solid fa-house"></i></a></li></div>
           <div title="Products"><li><a href="#products" class="bottom-nav-item"><i class="fa-solid fa-box-open"></i></a></li></div>
           <div title="Contact"><li><a href="#contact" class="bottom-nav-item"><i class="fa-solid fa-envelope"></i></a></li></div>
+          <div title="Dark Mode"><li><button class="mob-theme-toggle" id="mobThemeToggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li></div>
         </ul>
       </nav>
  
