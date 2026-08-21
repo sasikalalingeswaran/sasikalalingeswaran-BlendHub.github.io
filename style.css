@@ -899,7 +899,7 @@ img {
    Responsive
 ========================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -915,6 +915,35 @@ img {
 
   .homepara{
     display: none;
+  }
+
+  .boxes{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .flex-box{
+    width: 300px !important;
+  }
+
+  .category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homehead,
+  .spanhome{
+    font-size: 20px !important;
+  }
+
+  .homepara{
+    display: none;
+  }
+
+  .shop{
+   top: 200px !important;
   }
 }
 
