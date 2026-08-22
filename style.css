@@ -1158,6 +1158,26 @@ img {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+@media (max-width: 412px){
+  .flex-box{
+    display: none;
+  }
+  .homehead,
+  .spanhome{
+    font-size: 10px !important;
+    margin-top: 20px;
+  }
+
+  .homepara{
+    display: none;
+  }
+
+  .shop{
+   top: 80px !important;
+  }
+}
+
 @media (max-width: 640px) {
   .slideshow-container img {
     height: 220px;
