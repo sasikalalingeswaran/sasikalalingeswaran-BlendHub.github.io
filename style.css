@@ -97,9 +97,7 @@ img {
   display: none;
 }
 
-/* =========================================
-   Header & Navigation
-========================================= */
+/*Header & Navigation*/
 
 .site-header {
   background-color: var(--navy);
@@ -180,9 +178,7 @@ img {
   flex-shrink: 0;
 }
 
-/* =========================================
-   Dark Mode Toggle (checkbox switch)
-========================================= */
+/*Dark Mode Toggle (checkbox switch) */
 
 .theme-switch {
   position: relative;
@@ -286,9 +282,7 @@ img {
   right: 90px;
 }
 
-/* =========================================
-   Hero
-========================================= */
+/*Hero*/
 
 .hero {
   background-color: var(--bg-page);
@@ -309,9 +303,7 @@ img {
   color: var(--text-muted);
 }
 
-/* =========================================
-   Section titles (shared)
-========================================= */
+/* Section titles  */
 
 .section-title {
   text-align: center;
@@ -332,9 +324,7 @@ img {
   border-radius: 2px;
 }
 
-/* =========================================
-   Product Section
-========================================= */
+/* Product Section */
 
 .product-section {
   max-width: 1200px;
@@ -557,9 +547,7 @@ img {
   color: var(--white);
 }
 
-/* =========================================
-   Product Detail Drawer
-========================================= */
+/* Product Detail Drawer */
 
 .detail-overlay {
   position: fixed;
@@ -663,9 +651,7 @@ img {
 #detailImage{
   height: 200px;
 }
-/* =========================================
-   Contact Section
-========================================= */
+/* Contact Section */
 
 .contact-section {
   background-color: var(--bg-page);
@@ -824,9 +810,7 @@ img {
   }
 }
 
-/* =========================================
-   Footer
-========================================= */
+/* Footer */
 
 .site-footer {
   background-color: var(--navy);
@@ -895,9 +879,7 @@ img {
   font-size: 25px;
   color: #fff;
 }
-/* =========================================
-   Responsive
-========================================= */
+/* Responsive */
 
 @media (max-width: 820px) {
   .product-grid {
@@ -1003,9 +985,7 @@ img {
   }
 }
 
-/* =========================================
-   Hero Slideshow
-========================================= */
+/*  Hero Slideshow */
 
 .mySlides {display: none;}
 
@@ -1097,7 +1077,7 @@ img {
 }
 .cate-display h4{
   font-size: 20px;
-  color: var(--navy); /* fixed dark text: these cards keep a pastel bg in both themes */
+  color: var(--navy); 
 }
 .cate-display span{
   font-weight: 400;
