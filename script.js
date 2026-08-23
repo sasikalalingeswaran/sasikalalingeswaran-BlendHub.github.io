@@ -1,9 +1,4 @@
-// =========================================
-// BlendHub — Product Data
-// =========================================
-// Each product points at a real image file under images/products/.
-// Add your own photos there using these exact filenames (or update the
-// paths below to match whatever you name them).
+
 
 var products = [
   {
@@ -68,9 +63,7 @@ var products = [
   }
 ];
 
-// =========================================
-// BlendHub — App State & Elements
-// =========================================
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -92,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var currentCategory = 'all';
   var selectedProduct = null;
 
-  // ---- Build a single product card ----
+  
   function createCardHTML(product) {
     return (
       '<article class="product-card" data-id="' + product.id + '">' +
@@ -112,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
   }
 
-  // ---- Render products for a given category ----
+
   function renderProducts(category) {
     var list = category === 'all'
       ? products
@@ -120,8 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     grid.innerHTML = list.map(createCardHTML).join('');
   }
-
-  // ---- Switch category with slide-out / slide-in animation ----
   function showCategory(category, button) {
     if (category === currentCategory) return;
     currentCategory = category;
@@ -135,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       renderProducts(category);
       grid.classList.remove('slide-out');
-      void grid.offsetWidth; // restart animation
+      void grid.offsetWidth; 
       grid.classList.add('slide-in');
     }, 300);
   }
@@ -305,9 +296,6 @@ document.addEventListener('DOMContentLoaded', function () {
   showSlides();
 });
 
-// =========================================
-// Hero Slideshow
-// =========================================
 
 var slideIndex = 0;
 var slideTimer;
