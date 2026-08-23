@@ -1,5 +1,4 @@
 
-
 var products = [
   {
     id: 'earbuds',
@@ -137,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---- Cart helpers ----
   function bumpCart() {
     cartCount++;
     cartCountEl.textContent = cartCount;
@@ -158,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1200);
   }
 
-  // ---- Product detail drawer ----
   function openDetails(product) {
     selectedProduct = product;
 
@@ -194,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
     flashAdded(detailAddBtn);
   });
 
-  // ---- Event delegation for card buttons (wishlist / view / add) ----
   grid.addEventListener('click', function (event) {
     var button = event.target.closest('button[data-action]');
     if (!button) return;
@@ -214,10 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ---- Initial render ----
   renderProducts('all');
 
-  // ---- Contact form submission (UI only, no backend) ----
   var contactForm = document.getElementById('contact-form');
   var formStatus = document.getElementById('form-status');
 
@@ -238,7 +232,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ---- Nav link active state ----
   var navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(function (link) {
@@ -247,8 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
       link.classList.add('active');
     });
   });
-
-  // ---- Dark mode toggle (header checkbox switch + mobile icon button) ----
+  
   var themeToggle = document.getElementById('themeToggle');
   var mobThemeToggle = document.getElementById('mobThemeToggle');
 
@@ -270,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateThemeIcons();
   }
 
-  updateThemeIcons(); // match whatever the inline head script already applied
+  updateThemeIcons(); 
 
   if (themeToggle) {
     themeToggle.addEventListener('change', function () {
@@ -284,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Shop Now button on hero (scrolls to products) ----
   var shopBtn = document.querySelector('.shop');
   if (shopBtn) {
     shopBtn.addEventListener('click', function () {
@@ -292,7 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Hero slideshow ----
   showSlides();
 });
 
